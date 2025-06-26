@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Annapurna Rasoi – Swaad Ghar Jaisa!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fffaf5;
+      color: #4e342e;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #ffd6d6, #fff);
+      color: #4e342e;
+      padding: 1rem 0.5rem;
+      text-align: center;
+      font-family: 'Tangerine', cursive;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      padding: 1rem;
+    }
+    button {
+      background-color: #ffb6b9;
+      border: none;
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      transition: background 0.3s;
+      flex: 1 1 140px;
+      max-width: 160px;
+    }
+    button:hover {
+      background-color: #f48fb1;
+    }
+    .menu-section {
+      display: none;
+      margin: 1rem auto;
+      width: 90%;
+      max-width: 700px;
+      background-color: #fff0f0;
+      border: 2px solid #fddede;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      padding: 0.8rem;
+      border-bottom: 1px solid #e0bfbf;
+      text-align: left;
+    }
+    th {
+      background-color: #ffe0e0;
+    }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1rem;
+      background-color: #f9cfcf;
+      color: #4e342e;
+    }
+    .whatsapp {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Responsive Styling */
+    @media screen and (max-width: 600px) {
+      header {
+        font-size: 2.2rem;
+      }
+      button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+      }
+      th, td {
+        font-size: 0.95rem;
+      }
+      .menu-section {
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>🍽️ Annapurna Rasoi</header>
+
+  <nav>
+    <button onclick="toggleSection('bulk')">🎉 Party Order</button>
+    <button onclick="toggleSection('sweets')">🍬 Sweets</button>
+    <button onclick="toggleSection('tiffin')">🥗 Tiffin Services</button>
+    <button onclick="toggleSection('snacks')">🍟 Snacks</button>
+    <button onclick="toggleSection('pickles')">🥒 Pickles</button>
+  </nav>
+
+  <div id="bulk" class="menu-section">
+    <h2>Bulk Order</h2>
+    <h4>🎂 Party/Birthday Party Combo for 20 People – ₹3,500</h4>
+    <ul>
+      <li>Any dal</li>
+      <li>Any Paneer Sabzi</li>
+      <li>1 Sabzi (Any of Your Choice)</li>
+      <li>50 Roti / Poori</li>
+      <li>Chawal</li>
+      <li>Raita and Salad</li>
+      <li>Papad</li>
+    </ul>
+  </div>
+
+  <div id="pickles" class="menu-section">
+    <h3>Pickles (Achaar) 🥒</h3>
+    <table>
+      <tr><th>Pickle</th><th>Rate</th></tr>
+      <tr><td>Mirchi Achaar</td><td>₹320/kg</td></tr>
+      <tr><td>Mango Pickle</td><td>₹300/kg</td></tr>
+      <tr><td>Mango Sweet Pickle</td><td>₹200/500g</td></tr>
+    </table>
+  </div>
+
+  <div id="sweets" class="menu-section">
+    <h3>🍨 Sweets & Specialty</h3>
+    <table>
+      <tr><th>Item</th><th>Rate</th></tr>
+      <tr><td>Besan Ladoo (Desi Ghee)</td><td>₹700/kg</td></tr>
+      <tr><td>Atta Ladoo (Desi Ghee)</td><td>₹700/kg</td></tr>
+      <tr><td>Dry Fruit Ladoo</td><td>₹700/kg</td></tr>
+      <tr><td>Badam Shake Syrup (250g Badam)</td><td>₹500</td></tr>
+      <tr><td>Sweet / Namkeen Lassi</td><td>₹70</td></tr>
+      <tr><td>Homemade Ice Creams (500mL - All Flavours)</td><td>₹150</td></tr>
+      <tr><td>🍦 Vanilla</td><td></td></tr>
+      <tr><td>🥭 Mango</td><td></td></tr>
+      <tr><td>🍫 Chocolate</td><td></td></tr>
+      <tr><td>🍯 Butterscotch</td><td></td></tr>
+      <tr><td>🍒 Tutti Frutti</td><td></td></tr>
+      <tr><td>Namkeen Matthi</td><td>₹350/kg</td></tr>
+    </table>
+  </div>
+
+  <div id="tiffin" class="menu-section">
+    <h3>🥗 Tiffin Services</h3>
+    <table>
+      <tr><th>Type</th><th>Rate</th></tr>
+      <tr><td>Monthly Plan (1 meal/day, except Sat-Sun)</td><td>₹2000/3000</td></tr>
+      <tr><td>🥘 Premium Thali:<br>Dal + Paneer sabzi + Rice + 3 Roti + Raita + Salad</td><td>₹130</td></tr>
+      <tr><td>🥗 Budget Thali:<br>Dal + 1 sabzi + Rice + 2 Roti</td><td>₹90</td></tr>
+    </table>
+  </div>
+
+  <div id="snacks" class="menu-section">
+    <h3>🍟 Snacks</h3>
+    <table>
+      <tr><th>Item</th><th>Rate</th></tr>
+      <tr><td><strong>Quick Snacks (Order 40 min in advance)</strong></td><td></td></tr>
+      <tr><td>Bread toast (Aloo)</td><td>₹20</td></tr>
+      <tr><td>Bread toast (Paneer + Capsicum)</td><td>₹25</td></tr>
+      <tr><td>Bread Pakoda (Aloo)</td><td>₹25</td></tr>
+      <tr><td>Aloo Bites (10 pcs)</td><td>₹60</td></tr>
+      <tr><td>Honey Chilli Potato</td><td>₹75</td></tr>
+      <tr><td>French Fries</td><td>₹50</td></tr>
+      <tr><td>Poha (Vegetable)</td><td>₹75</td></tr>
+      <tr><td>Upma</td><td>₹75</td></tr>
+      <tr><td><strong>Paranthas (2 pcs – 40 min advance)</strong></td><td></td></tr>
+      <tr><td>Aloo Parantha</td><td>₹50</td></tr>
+      <tr><td>Paneer Pyaz Parantha</td><td>₹75</td></tr>
+      <tr><td>Gobhi Parantha</td><td>₹50</td></tr>
+      <tr><td>Seasonal Veg Parantha (Methi, Dal, Mooli, Palak)</td><td>₹60</td></tr>
+    </table>
+  </div>
+
+  <footer>
+    Contact: +91-9953317238 | Location: Capital Athena, Greater Noida 201306<br>
+    <a class="whatsapp" href="https://wa.me/919876543210" target="_blank">📲 Order via WhatsApp</a>
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      document.querySelectorAll('.menu-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
