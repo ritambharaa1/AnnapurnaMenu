@@ -104,6 +104,20 @@
       .menu-section {
         padding: 0.8rem;
       }
+      @keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.menu-section {
+  animation: fadeInUp 0.7s ease;
+}
+
     }
   </style>
 </head>
